@@ -6,10 +6,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Scanner;
 
+/**
+ * Created by Squall on 17/08/2014.
+ */
 //For Rankings Based on 14 August 2014
-//Note - Designed for a family of 5 (as mine is)
-//Additional methods would be required handle a family of three etc
 public class RewrittenWorldCupWithArrayList {
 
     public static String[] tier1Teams = {"Germany", "Argentina", "Netherlands", "Colombia", "Belgium"};
@@ -28,11 +30,17 @@ public class RewrittenWorldCupWithArrayList {
     public int array4Pos = 0;
     public static ArrayList<String> teamOverList = new ArrayList<String>(2);
 
-    public static ArrayList<String> dadTeams = new ArrayList<String>(6);
-    public static ArrayList<String> mumTeams = new ArrayList<String>(6);
-    public static ArrayList<String> alTeams = new ArrayList<String>(6);
-    public static ArrayList<String> geoTeams = new ArrayList<String>(6);
-    public static ArrayList<String> ozTeams = new ArrayList<String>(6);
+    public static ArrayList<String> playerOneTeam = new ArrayList<String>(6);
+    public static ArrayList<String> playerTwoTeam = new ArrayList<String>(6);
+    public static ArrayList<String> playeThreeTeam = new ArrayList<String>(6);
+    public static ArrayList<String> playerFourTeam = new ArrayList<String>(6);
+    public static ArrayList<String> playerFiveTeam = new ArrayList<String>(6);
+
+    public static String player1Name;
+    public static String player2Name;
+    public static String player3Name;
+    public static String player4Name;
+    public static String player5Name;
 
     FileWriter fstream = null;
 
@@ -42,6 +50,18 @@ public class RewrittenWorldCupWithArrayList {
 
         worldCupShuffle.setupFilePrint();
 
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("Family Member 1 Enter your Name.");
+        player1Name = keyboard.nextLine();
+        System.out.println("Family Member 2 Enter your Name.");
+        player2Name = keyboard.nextLine();
+        System.out.println("Family Member 3 Enter your Name.");
+        player3Name = keyboard.nextLine();
+        System.out.println("Family Member 4 Enter your Name.");
+        player4Name = keyboard.nextLine();
+        System.out.println("Family Member 5 Enter your Name.");
+        player5Name = keyboard.nextLine();
 
         worldCupShuffle.setupArrayList(teamTier1List, tier1Teams);
         worldCupShuffle.setupArrayList(teamTier2List, tier2Teams);
@@ -57,24 +77,24 @@ public class RewrittenWorldCupWithArrayList {
 
         worldCupShuffle.printAllToFile();
 
-        worldCupShuffle.assignTeams(dadTeams);
-        worldCupShuffle.assignTeams(mumTeams);
-        worldCupShuffle.assignTeams(alTeams);
-        worldCupShuffle.assignTeams(geoTeams);
-        worldCupShuffle.assignTeams(ozTeams);
+        worldCupShuffle.assignTeams(playerOneTeam);
+        worldCupShuffle.assignTeams(playerTwoTeam);
+        worldCupShuffle.assignTeams(playeThreeTeam);
+        worldCupShuffle.assignTeams(playerFourTeam);
+        worldCupShuffle.assignTeams(playerFiveTeam);
 
         worldCupShuffle.determineBonusTeams();
 
-        worldCupShuffle.setupFilePrintMultiple("DadsTeams.txt");
-        worldCupShuffle.printPersonsTeamsToFile(dadTeams);
-        worldCupShuffle.setupFilePrintMultiple("MumsTeams.txt");
-        worldCupShuffle.printPersonsTeamsToFile(mumTeams);
-        worldCupShuffle.setupFilePrintMultiple("AlexsTeams.txt");
-        worldCupShuffle.printPersonsTeamsToFile(alTeams);
-        worldCupShuffle.setupFilePrintMultiple("GeorgesTeams.txt");
-        worldCupShuffle.printPersonsTeamsToFile(geoTeams);
-        worldCupShuffle.setupFilePrintMultiple("OllysTeams.txt");
-        worldCupShuffle.printPersonsTeamsToFile(ozTeams);
+        worldCupShuffle.setupFilePrintMultiple(player1Name + ".txt");
+        worldCupShuffle.printPersonsTeamsToFile(playerOneTeam);
+        worldCupShuffle.setupFilePrintMultiple(player2Name + ".txt");
+        worldCupShuffle.printPersonsTeamsToFile(playerTwoTeam);
+        worldCupShuffle.setupFilePrintMultiple(player3Name + ".txt");
+        worldCupShuffle.printPersonsTeamsToFile(playeThreeTeam);
+        worldCupShuffle.setupFilePrintMultiple(player4Name + ".txt");
+        worldCupShuffle.printPersonsTeamsToFile(playerFourTeam);
+        worldCupShuffle.setupFilePrintMultiple(player5Name + ".txt");
+        worldCupShuffle.printPersonsTeamsToFile(playerFiveTeam);
 
     }
 
@@ -193,32 +213,32 @@ public class RewrittenWorldCupWithArrayList {
             }
             if (a == 5)
             {
-                System.out.println("Bonus Team For Dad!");
-                assignBonusTeams(dadTeams, i);
+                System.out.println("Bonus Team For " + player1Name);
+                assignBonusTeams(playerOneTeam, i);
                 lastA = 5;
             }
             if (a == 4)
             {
-                System.out.println("Bonus Team For Mum!");
-                assignBonusTeams(mumTeams, i);
+                System.out.println("Bonus Team For " + player2Name);
+                assignBonusTeams(playerTwoTeam, i);
                 lastA = 4;
             }
             if (a == 3)
             {
-                System.out.println("Bonus Team For Al!");
-                assignBonusTeams(alTeams, i);
+                System.out.println("Bonus Team For " + player3Name);
+                assignBonusTeams(playeThreeTeam, i);
                 lastA = 3;
             }
             if (a == 2)
             {
-                System.out.println("Bonus Team For George!");
-                assignBonusTeams(geoTeams, i);
+                System.out.println("Bonus Team For " + player4Name);
+                assignBonusTeams(playerFourTeam, i);
                 lastA = 2;
             }
             if (a == 1)
             {
-                System.out.println("Bonus Team For Olly!");
-                assignBonusTeams(ozTeams, i);
+                System.out.println("Bonus Team For " + player5Name);
+                assignBonusTeams(playerFiveTeam, i);
                 lastA = 1;
             }
         }
