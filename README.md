@@ -2,4 +2,8 @@ FamilyWorldCupShuffle
 =====================
 
 Novice Fun Project created for World Cup
-Currently only works for my specific family setup.
+
+Takes user input names, breaks World Cup 2014 teams into 4 categories of quality.
+E.g. Top teams are category one, teams ranked 5-15 are category 2.
+
+Outputs each users team in a text file with the directory C://Users/UserName/WorldCupTeams/INPUTNAME.txt
