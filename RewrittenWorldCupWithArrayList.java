@@ -9,7 +9,7 @@ import java.util.Collections;
 
 //For Rankings Based on 14 August 2014
 //Note - Designed for a family of 5 (as mine is)
-//Additional methods would be required handle a family of three etc. Ideally I would rewrite it
+//Additional methods would be required handle a family of three etc
 public class RewrittenWorldCupWithArrayList {
 
     public static String[] tier1Teams = {"Germany", "Argentina", "Netherlands", "Colombia", "Belgium"};
