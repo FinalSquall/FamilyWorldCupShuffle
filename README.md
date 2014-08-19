@@ -8,4 +8,4 @@ E.g. Top teams are category one, teams ranked 5-15 are category 2.
 
 Shuffles teams for each user and;
 
-Outputs each users team in a text file with the directory C://Users/UserName/WorldCupTeams/INPUTNAME.txt
+Outputs each users team as a text file at directory C://Users/UserName/WorldCupTeams/INPUTNAME.txt
