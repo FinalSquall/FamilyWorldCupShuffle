@@ -6,4 +6,6 @@ Novice Fun Project created for World Cup
 Takes user input names, breaks World Cup 2014 teams into 4 categories of quality.
 E.g. Top teams are category one, teams ranked 5-15 are category 2.
 
+Shuffles teams for each user and;
+
 Outputs each users team in a text file with the directory C://Users/UserName/WorldCupTeams/INPUTNAME.txt
