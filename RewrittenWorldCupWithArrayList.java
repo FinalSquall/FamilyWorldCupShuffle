@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-/**
- * Created by Squall on 17/08/2014.
- */
 //For Rankings Based on 14 August 2014
 public class RewrittenWorldCupWithArrayList {
 
