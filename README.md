@@ -3,9 +3,7 @@ FamilyWorldCupShuffle
 
 Novice Fun Project created for the World Cup some time ago, using it to familiarize myself with Github
 
-Takes user input names, breaks World Cup 2014 teams into 4 categories of quality.
-E.g. Top teams are category one, teams ranked 5-15 are category 2.
+Takes a number of players for input, followed by the name of each player. Calculates the most efficient
+way to split teams up based on the number of players, shuffles the teams and assigns them to players.
 
-Shuffles teams for each user and;
-
-Outputs each users team as a text file at directory C://Users/UserName/WorldCupTeams/INPUTNAME.txt
+Each users team is output as a text file at directory C://Users/UserName/WorldCupTeams/INPUTNAME.txt
