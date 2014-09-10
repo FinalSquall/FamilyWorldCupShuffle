@@ -5,9 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created by Squall on 19/08/2014.
- */
 public class WorldCupShuffle2 {
 
     public static ArrayList<String> allTeams = new ArrayList<String>(Arrays.asList("Germany", "Argentina", "Netherlands", "Colombia", "Belgium",
